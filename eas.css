@@ -1,0 +1,49 @@
+body {
+    background-color: lightslategray;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 48px;
+    font-style: italic;
+    color: darkred;
+}
+
+.container {
+    display: flex;
+    gap: 128px;
+}
+
+.side-panel {
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+#colorpicker {
+    border-radius: 50%;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.option {
+    font-size: 24px;
+    width: 196px;
+    height: 48px;
+    padding: 4px 0px;
+    background-color: dimgray;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+.sketchpad {
+    box-shadow: 3px 5px #505050;
+    background-color: white;
+    min-width: 480px;
+    min-height: 480px;
+}
