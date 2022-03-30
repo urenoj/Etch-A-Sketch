@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="eas.css">
     </head>
     <body>
-        <h1>Etch-A-Sketch</h1>
         <div class="container">
             <div class="side-panel">
                 <input type="color" id="colorpicker" onclick="colorSolid()" value="#1E90FF">
@@ -16,7 +15,10 @@
                 <button type="button" class="option" onclick="clearGrid()">Clear</button>
                 <button type="button" class="option" onclick="newGrid()">New Grid</button>
             </div>
-            <table class="sketchpad"></table>
+            <div class="etch-a-sketch">
+                <h1>Etch-A-Sketch</h1>
+                <table class="sketchpad"></table>
+            </div>
         </div>
         <script src="eas.js"></script>
     </body>

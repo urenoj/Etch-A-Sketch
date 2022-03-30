@@ -1,17 +1,19 @@
 body {
-    background-color: silver;
+    background-color: lightslategray;
 }
 
 h1 {
+    margin: 20px;
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-size: 48px;
     font-style: italic;
-    color: red;
+    color: goldenrod;
 }
 
 .container {
+    margin-top: 100px;
     display: flex;
     gap: 128px;
 }
@@ -24,6 +26,28 @@ h1 {
     gap: 4px;
 }
 
+.etch-a-sketch {
+    display: flex;
+    flex-direction: column;
+    background-color: firebrick;
+    border-radius: 12px;
+    min-width: 600px;
+    min-height: 660px;
+}
+
+.sketchpad {
+    align-self: center;
+    background-color: white;
+    min-width: 480px;
+    min-height: 480px;
+}
+
+.colorswatch {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 #colorpicker {
     width: 100px;
     height: 100px;
@@ -32,18 +56,14 @@ h1 {
 
 .option {
     font-size: 24px;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
     width: 196px;
     height: 48px;
     padding: 4px 0px;
-    background-color: dimgray;
-    color: white;
+    background-color: firebrick;
+    color: goldenrod;
     border: none;
     border-radius: 12px;
 }
 
-.sketchpad {
-    box-shadow: 3px 5px #505050;
-    background-color: white;
-    min-width: 480px;
-    min-height: 480px;
-}
