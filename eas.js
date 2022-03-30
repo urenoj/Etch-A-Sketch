@@ -1,6 +1,7 @@
+let sketchpad = document.querySelector('.sketchpad');
+
 function genGrid(x) {
-    for(let i = 0; i < x; i++) {
-        let sketchpad = document.querySelector('.sketchpad');
+    for(let i = 0; i < x; i++) {        
         let row = document.createElement('tr');
         row.className = 'row';
         row.style.padding = 0;
@@ -20,7 +21,6 @@ function defaultGrid() {
 
 defaultGrid();
 
-let colorpicker = document.querySelector('#colorpicker');
 let squares = document.querySelectorAll('td');
 
 for(let j = 0; j < squares.length; j++) {
@@ -31,10 +31,12 @@ for(let j = 0; j < squares.length; j++) {
 
 function colorSolid() {
     for(let j = 0; j < squares.length; j++) {
-            squares[j].addEventListener('mouseenter', function() {
+        let colorpicker = document.querySelector('#colorpicker');
+
+        squares[j].addEventListener('mouseenter', function() {
                 squares[j].style.backgroundColor = colorpicker.value;
-            });
-        }
+        });
+    }
 }
 
 function colorRGB() {
@@ -48,19 +50,26 @@ function colorRGB() {
 function erase() { 
     for(let j = 0; j < squares.length; j++) {
         squares[j].addEventListener('mouseenter', function() {
-            squares[j].style.backgroundColor = "white";
+            squares[j].style.backgroundColor = "";
         });
     }
 }
 
 function clearGrid() {
     for(let j = 0; j < squares.length; j++) {
-        squares[j].style.backgroundColor = "white";
+        squares[j].style.backgroundColor = "";
     }
 }
 
 function newGrid() {
-    let input = prompt('Enter the size of your grid: ', '16');
+    let rows = document.querySelectorAll('tr');
+    for(let i = 0; i < rows.length; i++) {
+        sketchpad.deleteRow(0);
+    }
+
+    let input = prompt('Enter the size of your grid: ', '24');
     num = Number(input);
     genGrid(num);
+    squares = document.querySelectorAll('td');
+    colorSolid();
 }
