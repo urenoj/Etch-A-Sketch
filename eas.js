@@ -21,6 +21,17 @@ function defaultGrid() {
 
 defaultGrid();
 
+let colorswatch = document.querySelector('.colorswatch');
+let colorpicker = document.querySelector('#colorpicker');
+
+colorswatch.addEventListener('click', function() {
+    colorpicker.click();
+});
+
+colorpicker.addEventListener('change', function() {
+    colorswatch.style.backgroundColor = colorpicker.value;
+});
+
 let squares = document.querySelectorAll('td');
 
 for(let j = 0; j < squares.length; j++) {
@@ -31,8 +42,6 @@ for(let j = 0; j < squares.length; j++) {
 
 function colorSolid() {
     for(let j = 0; j < squares.length; j++) {
-        let colorpicker = document.querySelector('#colorpicker');
-
         squares[j].addEventListener('mouseenter', function() {
                 squares[j].style.backgroundColor = colorpicker.value;
         });
