@@ -76,7 +76,13 @@ function newGrid() {
         sketchpad.deleteRow(0);
     }
 
-    let input = prompt('Enter the size of your grid: ', '24');
+    let input = prompt('Enter the size of your grid (up to 64): ', '24');
+    
+    while (Number(input) > 64 || Number(input) <= 0) {
+        alert('Not a valid grid size!');
+        input = prompt('Enter the size of your grid (up to 64): ', '24');
+    } 
+
     num = Number(input);
     genGrid(num);
     squares = document.querySelectorAll('td');
