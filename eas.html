@@ -9,12 +9,12 @@
         <h1>Etch-A-Sketch</h1>
         <div class="container">
             <div class="side-panel">
-                <button type="button" id="colorpicker">Color</button>
-                <button type="button" class="option">Solid</button>
-                <button type="button" class="option">RGB</button>
-                <button type="button" class="option">Erase</button>
-                <button type="button" class="option">Clear</button>
-                <button type="button" class="option">New Grid</button>
+                <input type="color" id="colorpicker" value="#1E90FF">
+                <button type="button" class="option" onclick="colorSolid()">Solid</button>
+                <button type="button" class="option" onclick="colorRGB()">RGB</button>
+                <button type="button" class="option" onclick="erase()">Erase</button>
+                <button type="button" class="option" onclick="clearGrid()">Clear</button>
+                <button type="button" class="option" onclick="newGrid()">New Grid</button>
             </div>
             <table class="sketchpad"></table>
         </div>

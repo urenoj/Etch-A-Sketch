@@ -1,5 +1,5 @@
 body {
-    background-color: lightslategray;
+    background-color: silver;
 }
 
 h1 {
@@ -8,7 +8,7 @@ h1 {
     font-weight: bold;
     font-size: 48px;
     font-style: italic;
-    color: darkred;
+    color: red;
 }
 
 .container {
@@ -17,17 +17,17 @@ h1 {
 }
 
 .side-panel {
-    margin-left: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 20%;
     gap: 4px;
 }
 
 #colorpicker {
-    border-radius: 50%;
-    background-color: dodgerblue;
-    color: white;
+    width: 100px;
+    height: 100px;
+    margin-left: 25%;
 }
 
 .option {
