@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etch-A-Sketch</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="eas.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-panel">
+                <span class="colorswatch">
+                    <input type="color" id="colorpicker" onclick="colorSolid()" value="#1E90FF">
+                </span>
+                <button type="button" class="option" onclick="colorSolid()">Solid</button>
+                <button type="button" class="option" onclick="colorRGB()">RGB</button>
+                <button type="button" class="option" onclick="erase()">Erase</button>
+                <button type="button" class="option" onclick="clearGrid()">Clear</button>
+                <button type="button" class="option" onclick="newGrid()">New Grid</button>
+            </div>
+            <div class="etch-a-sketch">
+                <h1>Etch-A-Sketch</h1>
+                <table class="sketchpad"></table>
+            </div>
+        </div>
+        <script src="eas.js"></script>
+    </body>
+</html>
